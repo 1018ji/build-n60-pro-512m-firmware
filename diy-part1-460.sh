@@ -26,3 +26,5 @@ chmod -R 755 ./package/luci-app-adguardhome/*
 
 git clone https://github.com/EasyTier/luci-app-easytier/ package/luci-app-easytier
 chmod -R 755 ./package/luci-app-easytier/*
+
+sed -i 's/reg = <0x0580000 0x7280000>;/reg = <0x0580000 0x1cc00000>;/' target/linux/mediatek/dts/mt7986a-netcore-n60-pro.dts
