@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: padavanonly-immortalwrt-mt798x-6.6-ubi-506.5m
+name: padavanonly-immortalwrt-mt798x-6.6-ubi-490m-builder
 
 on:
   repository_dispatch:
@@ -21,12 +21,12 @@ env:
   REPO_BRANCH: openwrt-24.10-6.6
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: padavanonly-immortalwrt-mt798x-6.6/rom.config
-  DIY_P1_SH: padavanonly-immortalwrt-mt798x-6.6/diy-part1-ubi-506.5m.sh
+  DIY_P1_SH: padavanonly-immortalwrt-mt798x-6.6/diy-part1-ubi-490m.sh
   DIY_P2_SH: padavanonly-immortalwrt-mt798x-6.6/diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: false
-  FIRMWARE_TAG: padavanonly-immortalwrt-mt798x-6.6-ubi-506.5m
+  FIRMWARE_TAG: padavanonly-immortalwrt-mt798x-6.6-ubi-490m
   TZ: Asia/Shanghai
 
 jobs:
