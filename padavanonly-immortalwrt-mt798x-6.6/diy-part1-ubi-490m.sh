@@ -28,3 +28,6 @@ git clone https://github.com/EasyTier/luci-app-easytier/ package/luci-app-easyti
 chmod -R 755 ./package/luci-app-easytier/*
 
 sed -i 's/reg = <0x0580000 0x7280000>;/reg = <0x0580000 0x1ea00000>;/' target/linux/mediatek/dts/mt7986a-netcore-n60-pro.dts
+
+sed -i 's/luci-app-ttyd//g' target/linux/mediatek/Makefile
+sed -i 's/+luci-app-ttyd//g' package/mtk/applications/luci-app-turboacc-mtk/Makefile
