@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: padavanonly-immortalwrt-mt798x-6.6-with-wifi-ubi-506.5m-builder
+name: 237-6.6内核-无线-506.5m
 
 on:
   repository_dispatch:

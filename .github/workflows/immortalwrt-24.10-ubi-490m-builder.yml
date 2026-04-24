@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: immortalwrt-24.10-ubi-490m-builder
+name: 原版-6.6内核-无线-490m
 
 on:
   repository_dispatch:
