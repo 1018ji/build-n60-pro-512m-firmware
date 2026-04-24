@@ -18,3 +18,19 @@ sed -i 's/192.168.6.1/192.168.100.1/g' package/base-files/files/bin/config_gener
 
 # Modify hostname
 # sed -i 's/OpenWrt/P3TERX-Router/g' package/base-files/files/bin/config_generate
+
+cat > package/emortal/autocore/files/arm/tempinfo << 'EOF'
+#!/bin/sh
+
+THERMAL_PATH="/sys/class/thermal/thermal_zone0/temp"
+
+if [ -f "$THERMAL_PATH" ]; then
+    cpu_temp="$(awk '{printf("%.1f°C", $0 / 1000)}' "$THERMAL_PATH")"
+    echo -n "CPU: ${cpu_temp}"
+fi
+EOF
+chmod +x package/emortal/autocore/files/arm/tempinfo
+
+# rm -f /etc/config/wireless
+# rm -f /tmp/luci-indexcache.*.json
+# /etc/init.d/rpcd restart
