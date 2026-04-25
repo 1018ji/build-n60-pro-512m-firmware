@@ -31,6 +31,8 @@ fi
 EOF
 chmod +x package/emortal/autocore/files/arm/tempinfo
 
+sed -i 's/ \/ Wireless HNAT Disabled//g' package/mtk/applications/luci-app-turboacc-mtk/root/usr/libexec/rpcd/luci.turboacc
+
 # rm -f /etc/config/wireless
 # rm -f /tmp/luci-indexcache.*.json
 # /etc/init.d/rpcd restart
