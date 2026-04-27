@@ -33,6 +33,7 @@ chmod +x package/emortal/autocore/files/arm/tempinfo
 
 cp -f mtk_makefile target/linux/mediatek/Makefile
 
+sed -i 's/+kmod-wireguard //g' package/mtk/applications/luci-app-turboacc-mtk/Makefile
 sed -i 's/+luci-app-ttyd //g' package/mtk/applications/luci-app-turboacc-mtk/Makefile
 
 sed -i 's/ \/ Wireless HNAT Disabled//g' package/mtk/applications/luci-app-turboacc-mtk/root/usr/libexec/rpcd/luci.turboacc
