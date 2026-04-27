@@ -31,6 +31,10 @@ fi
 EOF
 chmod +x package/emortal/autocore/files/arm/tempinfo
 
+cp -f mtk_makefile target/linux/mediatek/Makefile
+
+sed -i 's/+luci-app-ttyd //g' package/mtk/applications/luci-app-turboacc-mtk/Makefile
+
 sed -i 's/ \/ Wireless HNAT Disabled//g' package/mtk/applications/luci-app-turboacc-mtk/root/usr/libexec/rpcd/luci.turboacc
 sed -i 's/+wireless-tools //g' package/kernel/linux/modules/netdevices.mk
 
