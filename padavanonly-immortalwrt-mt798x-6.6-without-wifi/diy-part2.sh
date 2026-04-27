@@ -38,6 +38,8 @@ sed -i 's/+luci-app-ttyd //g' package/mtk/applications/luci-app-turboacc-mtk/Mak
 sed -i 's/ \/ Wireless HNAT Disabled//g' package/mtk/applications/luci-app-turboacc-mtk/root/usr/libexec/rpcd/luci.turboacc
 sed -i 's/+wireless-tools //g' package/kernel/linux/modules/netdevices.mk
 
+sed -i 's/^CONFIG_USB_SUPPORT=y$/# CONFIG_USB_SUPPORT is not set/' target/linux/mediatek/filogic/config-6.6
+
 rm -f files/etc/banner
 
 # rm -f /etc/config/wireless
